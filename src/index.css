@@ -78,3 +78,17 @@ body {
   line-height:  60px;
   text-align: center;
 }
+
+.navigation ul li a .icon icon-icon {
+  font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
