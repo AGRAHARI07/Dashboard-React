@@ -46,6 +46,9 @@ body {
   position: relative;
   width: 200%;
   list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
 }
 
 .navigation ul li:hover {
@@ -75,7 +78,7 @@ body {
   display: block;
   min-width:  60px;
   height: 60px;
-  line-height:  60px;
+  line-height:  65px;
   text-align: center;
 }
 
