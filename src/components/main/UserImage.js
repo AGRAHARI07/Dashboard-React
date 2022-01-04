@@ -10,8 +10,6 @@ class UserImage extends Component {
             <img
             src={this.props.src}
             alt='userImage'
-            width="200"
-            height="250"
             ></img>
         </div>
     }
