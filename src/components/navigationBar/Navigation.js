@@ -1,14 +1,14 @@
 import { Component } from 'react';
 import NavigationButton from './NavigationButton'
-import { NAVIGATION_BUTTON } from './../assets/navigationElements'
+import { NAVIGATION_BUTTON } from '../../assets/navigationElements'
 
 class Navigation extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     getNavigationButton() {
-        return NAVIGATION_BUTTON.map(element => <NavigationButton logoName={element.logoName} text={element.text} />)
+        return NAVIGATION_BUTTON.map(element => <NavigationButton key={element.key || element.text} logoName={element.logoName} text={element.text} href={element.href || '#'} />)
     }
 
     render() {
