@@ -11,9 +11,9 @@ class Main extends Component {
     render() {
         return <div className="main">
             <div className="topbar">
-                <ToggleBar />
+                <ToggleBar handleToggleClick={this.props.handleToggleClick} />
                 <SearchBar />
-                <UserImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIbqmZtPX4a0Hb1r4SjbK7ffx7bBXMhkFJnSOwN4d-4X1MZg4"/>
+                <UserImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIbqmZtPX4a0Hb1r4SjbK7ffx7bBXMhkFJnSOwN4d-4X1MZg4" />
             </div>
         </div>;
     }

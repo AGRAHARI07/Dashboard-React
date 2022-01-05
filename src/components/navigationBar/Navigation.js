@@ -12,7 +12,7 @@ class Navigation extends Component {
     }
 
     render() {
-        return <div className="navigation">
+        return <div className={`navigation ${this.props.isToggled ? 'active' : ''}`}>
             <ul>{this.getNavigationButton()}</ul>
         </div>;
     }
