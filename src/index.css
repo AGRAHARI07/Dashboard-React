@@ -13,6 +13,9 @@
   --black1: #222;
   --black2: #999;
   --red: #f00;
+
+  --side-bar-width: 300px;
+  --side-bar-collapse-width: 80px;
 }
 
 body {
@@ -27,7 +30,7 @@ body {
 
 .navigation {
   position: fixed;
-  width: 300px;
+  width: var(--side-bar-width);
   height: 100%;
   background: var(--blue);
   border-left: 10px solid var(--blue);
@@ -36,7 +39,7 @@ body {
 }
 
 .navigation.active {
-  width: 80px;
+  width: var(--side-bar-collapse-width);
 }
 
 .navigation ul {
@@ -136,11 +139,16 @@ body {
 
 .main {
   position: absolute;
-  width: calc(100% - 300px);
-  left: 300px;
+  width: calc(100% - var(--side-bar-width));
+  left: var(--side-bar-width);
   min-height: 100vh;
   background: var(--white);
   transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - var(--side-bar-collapse-width));
+  left: var(--side-bar-collapse-width);
 }
 
 .topbar {

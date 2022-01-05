@@ -1,7 +1,5 @@
 import { Component } from 'react';
-import SearchBar from './SearchBar';
-import ToggleBar from './ToggleBar'
-import UserImage from './UserImage'
+import TopBar from './Topbar';
 
 class Main extends Component {
     // constructor(props) {
@@ -9,12 +7,8 @@ class Main extends Component {
     // }
 
     render() {
-        return <div className="main">
-            <div className="topbar">
-                <ToggleBar handleToggleClick={this.props.handleToggleClick} />
-                <SearchBar />
-                <UserImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIbqmZtPX4a0Hb1r4SjbK7ffx7bBXMhkFJnSOwN4d-4X1MZg4" />
-            </div>
+        return <div className={`main ${this.props.isToggled ? 'active' : ''}`}>
+            <TopBar handleToggleClick={this.props.handleToggleClick}/>
         </div>;
     }
 }

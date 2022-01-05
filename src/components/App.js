@@ -22,7 +22,7 @@ class App extends Component {
     render() {
         return <div className="container">
             <Navigation isToggled={this.state.isToggled} />
-            <Main handleToggleClick={this.handleToggleClick} />
+            <Main handleToggleClick={this.handleToggleClick} isToggled={this.state.isToggled}/>
         </div>;
     }
 }
