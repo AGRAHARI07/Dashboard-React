@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import NavigationButton from './NavigationButton'
-import { NAVIGATION_BUTTON } from '../../assets/navigationElements'
+import { NAVIGATION_BUTTON } from '../../assets/configurableData'
 
 class Navigation extends Component {
     // constructor(props) {

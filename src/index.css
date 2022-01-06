@@ -1,219 +1,270 @@
-* 
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:'Times New Roman', Times, serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 :root {
-  --blue: #287bff;
-  --white: #fff;
-  --grey: #f5f5f5;
-  --black1: #222;
-  --black2: #999;
-  --red: #f00;
-
-  --side-bar-width: 300px;
-  --side-bar-collapse-width: 80px;
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --red: #f00;
+    --side-bar-width: 300px;
+    --side-bar-collapse-width: 80px;
 }
 
 body {
-  min-height: 100vh;
-  overflow-x: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .navigation {
-  position: fixed;
-  width: var(--side-bar-width);
-  height: 100%;
-  background: var(--blue);
-  border-left: 10px solid var(--blue);
-  transition: 0.5s;
-  overflow: hidden;
+    position: fixed;
+    width: var(--side-bar-width);
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
 }
 
 .navigation.active {
-  width: var(--side-bar-collapse-width);
+    width: var(--side-bar-collapse-width);
 }
 
 .navigation ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .navigation ul li {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .navigation ul li.hovered,
 .navigation ul li:hover {
-  background: var(--white)
+    background: var(--white)
 }
 
 .navigation ul li:nth-child(1) {
-  margin-bottom: 40px;
-  pointer-events: none;
+    margin-bottom: 40px;
+    pointer-events: none;
 }
 
 .navigation ul li a {
-  position: relative;
-  display: block;
-  width: 100%;
-  display: flex;
-  text-decoration: none;
-  color: var(--white);
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
 }
 
 .navigation ul li.hovered a,
 .navigation ul li:hover a {
-  color: var(--blue)
+    color: var(--blue)
 }
 
 .navigation ul li a .icon {
-  position: relative;
-  display: block;
-  min-width:  60px;
-  height: 60px;
-  line-height:  65px;
-  text-align: center;
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
 }
 
 .navigation ul li a .icon icon-icon {
-  font-size: 1.75em;
+    font-size: 1.75em;
 }
 
 .navigation ul li a .title {
-  position: relative;
-  display: block;
-  padding: 0 10px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
 }
 
+
 /* Curve outside */
+
 .navigation ul li.hovered a:before,
 .navigation ul li:hover a:before {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  top: -50px;
-  background: transparent;
-  border-radius: 50%;
-  box-shadow: 35px 35px 0 10px var(--white);
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
 }
 
 .navigation ul li.hovered a:after,
 .navigation ul li:hover a:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  bottom: -50px;
-  background: transparent;
-  border-radius: 50%;
-  box-shadow: 35px -35px 0 10px var(--white);
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
 }
 
 
 /* main */
 
 .main {
-  position: absolute;
-  width: calc(100% - var(--side-bar-width));
-  left: var(--side-bar-width);
-  min-height: 100vh;
-  background: var(--white);
-  transition: 0.5s;
+    position: absolute;
+    width: calc(100% - var(--side-bar-width));
+    left: var(--side-bar-width);
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
 }
 
 .main.active {
-  width: calc(100% - var(--side-bar-collapse-width));
-  left: var(--side-bar-collapse-width);
+    width: calc(100% - var(--side-bar-collapse-width));
+    left: var(--side-bar-collapse-width);
 }
 
 .topbar {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .toggle {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5em;
-  cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
 }
 
 .search {
-  position: relative;
-  width: 400px;
-  margin: 0 10px;
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
 }
 
 .search label {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .search label input {
-  width: 100%;
-  height: 40px;
-  border-radius: 40px;
-  padding: 5px 20px;
-  padding-left: 40px;
-  font-size: 18px;
-  outline: none;
-  border: 1px solid var(--black2)
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 40px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2)
 }
 
 .search label ion-icon {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
 }
 
 .user {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .user img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Cards */
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Number of card is 4 per row */
+    grid-gap: 30px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    color: var(--black1);
+}
+
+.cardBox .card .numbers {
+    color: var(--blue);
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+.cardBox .card .cardName {
+    /* color: var(--black1); */
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBox {
+    /* color: var(--black1); */
+    font-size: 3.54em;
+}
+
+.cardBox .card:hover {
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBox {
+    color: var(--white);
 }
